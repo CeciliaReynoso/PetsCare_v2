@@ -3,7 +3,7 @@ export const URLBASE =
   process.env.NODE_ENV === "production"
     ? process.env.DOMAIN_URL_APP
     : `http://localhost::${process.env.PORT}`;
-    
+
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 // export const URLBASE = "http://localhost:3000";
 
@@ -16,7 +16,7 @@ export const ENDPOINT = {
   productsFilter:`${URLBASE}/productos/filtros`,
   product: `${URLBASE}/productos/:id`, 
   promocion: `${URLBASE}/productos/promocion`,
-  tienda: `${URLBASE}/productos/tienda`,
+  tienda: `${URLBASE}productos/tienda`,
 
   // Endpoints privados
   users: `${URLBASE}/usuarios`,
