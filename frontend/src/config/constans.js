@@ -1,4 +1,4 @@
-export const URLBASE = 'https://petscare-v2-backend.onrender.com'
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 // export const URLBASE = "http://localhost:3000";
 
