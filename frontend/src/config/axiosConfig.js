@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: https://petscare-v2-backend.onrender.com,
 });
 
 export const setAuthToken = (token) => {
