@@ -1,7 +1,7 @@
 
 export const URLBASE =
   process.env.NODE_ENV === "production"
-    ? process.env.DOMAIN_URL_APP
+    ? import.meta.env.VITE_BASE_URL
     : `http://localhost::${process.env.PORT}`;
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
