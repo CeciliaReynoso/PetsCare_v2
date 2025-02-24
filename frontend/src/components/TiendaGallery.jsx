@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCard'; 
 import { Link, useNavigate } from 'react-router-dom';
-import tiendaImage from '../../assets/tienda.png'; 
 import { ENDPOINT } from '../config/constans';
   
 const ProductGallery = () => {
