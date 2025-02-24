@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCard'; 
 import { Link } from 'react-router-dom';
-import tiendaImage from '../../assets/tienda.png'; 
 import { ENDPOINT } from '../config/constans';
 
 const TiendaGallery = () => {
@@ -25,7 +24,7 @@ const TiendaGallery = () => {
     <div className="app-container">
       <section className="recent-posts">      
         <Link to="/tienda" className="tienda-link">
-        <img src={tiendaImage} alt="Tienda" className="tienda-icon" /><span>Pulsa aquí para ver más productos</span>
+        <img src="/tienda.png" alt="Tienda" className="tienda-icon" /><span>Pulsa aquí para ver más productos</span>
         </Link>
         <h3>Publicaciones Recientes</h3>
       </section>
