@@ -15,7 +15,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors({origin: ["https://petscare-v2.onrender.com", "https://localhost:5173"]
+app.use(cors({origin: ["https://petscare-v2.onrender.com/", "https://localhost:5173/"]
 
 }));
 
