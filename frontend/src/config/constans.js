@@ -1,5 +1,10 @@
-const BASE_URL = import.meta.env.VITE_BASE_URL;
 
+export const URLBASE =
+  process.env.NODE_ENV === "production"
+    ? process.env.DOMAIN_URL_APP
+    : `http://localhost::${process.env.PORT}`;
+    
+// const BASE_URL = import.meta.env.VITE_BASE_URL;
 // export const URLBASE = "http://localhost:3000";
 
 export const ENDPOINT = {
