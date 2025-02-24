@@ -7,6 +7,7 @@ const proveedoresRoutes = require('./routes/proveedoresRoutes');
 const subcategoriasRoutes = require('./routes/subcategoriasRoutes'); 
 const productosAdminRoutes = require('./routes/productosAdminRoutes'); 
 const promocionesRoutes = require('./routes/promocionesRoutes'); 
+const tiendaRoutes = require('./routes/tiendaRoutes');
 const bodyParser = require('body-parser');
 const pedidosRouter = require('./routes/pedidos');
 
@@ -25,6 +26,7 @@ app.use("/", proveedoresRoutes);
 app.use("/", subcategoriasRoutes); 
 app.use("/", productosAdminRoutes);
 app.use("/", promocionesRoutes);
+app.use("/", tiendaRoutes);
 app.use("/", pedidosRouter);
 
 // Middleware de manejo de errores

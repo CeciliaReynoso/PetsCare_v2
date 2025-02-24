@@ -41,6 +41,7 @@ const Login = () => {
   };
 
   return (
+    <div className='fix-container'>
     <form onSubmit={handleForm} className='form-container'>
       <h1 className='form-title'>Iniciar Sesión</h1>
       <hr />
@@ -68,6 +69,7 @@ const Login = () => {
       </div>
       <button type='submit' className='btn btn-light mt-3'>Iniciar Sesión</button>
     </form>
+    </div>
   );
 };
 

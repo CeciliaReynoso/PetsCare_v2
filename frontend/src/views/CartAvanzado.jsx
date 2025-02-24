@@ -7,7 +7,6 @@ import axios from 'axios'; // Importar axios para hacer las solicitudes HTTP
 
 const Cart = ({ cartZIndex }) => {
   const { cart, removeFromCart, clearCart, increaseQuantity, decreaseQuantity } = useCart();
-  
   const { user, token } = useAuth();
   const navigate = useNavigate();
   

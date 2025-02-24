@@ -11,17 +11,6 @@ const Cart = ({ cartZIndex }) => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    if (!token) {
-        return;
-    }
-
-    if (user.rol !== 'CLIENTE') {
-      navigate('/no-autorizado');
-      return;
-    }
-  }, [user, navigate]);
-
-  useEffect(() => {
     const cartContainer = document.querySelector('.cart-container2');
     if (cartContainer) {
       cartContainer.style.zIndex = cartZIndex;
@@ -78,7 +67,7 @@ const Cart = ({ cartZIndex }) => {
   const Regresar = () => {
     return (
       <div style={{ textAlign: 'center', marginBottom:'10px',marginTop: '25px' }}>
-        <Link to="/">Volver a la Página Principal</Link>
+        <Link to="/tienda">Volver a la Página Principal</Link>
       </div>
     );
   };

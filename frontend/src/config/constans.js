@@ -10,6 +10,7 @@ export const ENDPOINT = {
   productsFilter:`${URLBASE}/productos/filtros`,
   product: `${URLBASE}/productos/:id`, 
   promocion: `${URLBASE}/productos/promocion`,
+  tienda: `${URLBASE}/productos/tienda`,
 
   // Endpoints privados
   users: `${URLBASE}/usuarios`,

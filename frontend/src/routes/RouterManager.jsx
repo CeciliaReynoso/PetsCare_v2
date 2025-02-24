@@ -33,6 +33,8 @@ import NuevoProveedor from '../views/PrivateViews/NuevoProveedor';
 import NuevaSubcategoria from '../views/PrivateViews/NuevaSubcategoria';
 import NuevoProducto from '../views/PrivateViews/NuevoProducto';
 import ProductGallery from '../components/ProductGallery';
+import TiendaGallery from '../components/ProductGallery';
+import TiendaLayout from '../layouts/TiendaLayout';
 
 export const RouterManager = () => {
   const { user } = useAuth();
@@ -45,8 +47,10 @@ export const RouterManager = () => {
             <Route path="*" element={<Page404 />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/cart" element={<Cart />}/>
-
+            <Route path="/cart" element={<Cart />}/>  
+            <Route path="/tienda" element={<TiendaLayout />} />  
+            <Route path="/detail/:id" element={<Detail />} />        
+            
             <Route path="/" element={!user || user?.rol === ROLES.CLIENTE ? <MainLayout /> : <AdminLayout />}>
               <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />}/>
@@ -55,6 +59,7 @@ export const RouterManager = () => {
               <Route path="/detail/:id" element={<Detail />} />
               <Route path="/home-perfil" element={<HomePerfil />} />
               <Route path="/productos-promocion" element={<ProductGallery />} />
+
             </Route>
 
             <Route path="/admin" element={<AdminLayout />}>

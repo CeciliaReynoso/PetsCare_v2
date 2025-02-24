@@ -60,11 +60,21 @@ body {
 
 .app-container {
   padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-height: 45%;
+}
+.fix-container {  
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  
 }
 .home-container {
   display: flex;

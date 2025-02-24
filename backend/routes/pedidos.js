@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { crearNuevoPedido, obtenerTodosLosPedidos } = require('../controllers/pedidosCotroller');
+const { crearNuevoPedido, obtenerTodosLosPedidos } = require('../controllers/pedidosController');
 const { validarTokenMiddleware } = require('../middlewares/middlewares');
 // Ruta para crear un nuevo pedido
 router.post('/pedidos', validarTokenMiddleware , crearNuevoPedido);

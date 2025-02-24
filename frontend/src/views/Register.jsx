@@ -58,6 +58,7 @@ const Register = () => {
   };
 
   return (
+    <div className='fix-container'>
     <div className="form-container">
       <div className="form-box">
         <h2>Registro de Usuario</h2>
@@ -81,6 +82,7 @@ const Register = () => {
           <button type="submit">Registrar</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };
