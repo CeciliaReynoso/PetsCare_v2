@@ -55,7 +55,7 @@ export const RouterManager = () => {
               <Route path="/home-perfil" element={<HomePerfil />} />
             </Route>
 
-            <Route path="/admin" element={<AuthGuard allowedRoles={[ROLES.ADMIN]}><AdminLayout /></AuthGuard>}>
+            <Route path="/admin" element={<AuthGuard allowedRoles={[ROLES.ADMINISTRADOR]}><AdminLayout /></AuthGuard>}>
               <Route index element={<Admin />} />        
               <Route path="/admin/users" element={<UserManagement />} />
               <Route path="/admin/users/edit-user/:id" element={<EditUserForm />} />
