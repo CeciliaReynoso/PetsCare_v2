@@ -19,7 +19,7 @@ const Buyer = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate('/tienda');
+      navigate('/');
       return;
     }
 

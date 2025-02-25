@@ -8,7 +8,7 @@ const Seller = () => {
 
         useEffect(() => {
           if (!user) {
-            navigate('/tienda');
+            navigate('/');
             return;
           }
       
