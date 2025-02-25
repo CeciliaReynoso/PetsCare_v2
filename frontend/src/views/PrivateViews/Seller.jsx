@@ -8,7 +8,6 @@ const Seller = () => {
 
         useEffect(() => {
           if (!user) {
-            navigate('/no-autorizado');
             return;
           }
       

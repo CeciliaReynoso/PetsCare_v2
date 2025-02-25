@@ -9,8 +9,9 @@ const LowStockProducts = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  
   useEffect(() => {
+    
     const fetchLowStockProducts = async () => {
       try {
         const response = await axios.get(`${ENDPOINT}/productos/stock_minimo`, {
@@ -56,6 +57,6 @@ const LowStockProducts = () => {
       )}
     </div>
   );
-};
+}
 
 export default LowStockProducts;
