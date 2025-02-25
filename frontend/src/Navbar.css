@@ -79,15 +79,15 @@
     background: var(--color-secondary);
     color: var(--color-text);
   }
-  
-  @media (max-width: 768px) {
-    .hide-on-mobile {
-      display: none;
-    }
-
+  @media (max-width: 576px) {
     .nav-btn {
       border: none;
-    }
+    }  
+    .hide-on-mobile {
+      display: none;
+    }}
+  
+  @media (max-width: 768px) {
     
     .navbar {
       margin:10px;
@@ -126,7 +126,7 @@
     .navbar .opciones {
       flex-direction: column;
       align-items: center;
-      width: 60%;
+      width: 65%;
     }
   
     .navbar .opciones button {

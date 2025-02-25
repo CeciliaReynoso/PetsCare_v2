@@ -337,6 +337,13 @@ a {
 .footer .social-links a:hover {
   color: var(--color-accent);
 }
+@media (max-width: 576px) {
+  .nav-btn {
+    border: none;
+  }  
+  .hide-on-mobile {
+    display: none;
+  }}
 
 @media (max-width: 768px) {
   .navbar {
