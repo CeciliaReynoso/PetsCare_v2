@@ -12,11 +12,12 @@ const Navigation = () => {
 
   const handleLogout = () => {
     logout();
+    navigate('/tienda');
   };
 
   useEffect(() => {
     if (!user) {
-      navigate('/');
+      navigate('/tienda');
     }
   }, [user, navigate]);
   
