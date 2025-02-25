@@ -8,6 +8,7 @@ const Seller = () => {
 
         useEffect(() => {
           if (!user) {
+            navigate('/tienda');
             return;
           }
       

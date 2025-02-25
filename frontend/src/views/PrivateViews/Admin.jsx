@@ -19,7 +19,7 @@ const Admin = () => {
 
       useEffect(() => {
         if (!user) {
-          navigate('/tienda');
+         navigate('/tienda');
           return;
         }
     
