@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/productos-admin', validarTokenMiddleware, getProductosAdmin);
 router.post('/productos-admin', validarTokenMiddleware, createProductoAdmin);
-router.put('/productos-admin/:id', validarTokenMiddleware, updateProductoAdmin);
-router.delete('/productos-admin/:id', validarTokenMiddleware, deleteProductoAdmin);
+router.put('/producto-admin/:id', validarTokenMiddleware, updateProductoAdmin);
+router.delete('/producto-admin/:id', validarTokenMiddleware, deleteProductoAdmin);
 
 module.exports = router;
