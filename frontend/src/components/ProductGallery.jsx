@@ -10,7 +10,7 @@ const TiendaGallery = () => {
   useEffect(() => {
     const fetchProductosTienda = async () => {
       try {
-        const response = await axios.get(`${ENDPOINT.tienda}`);
+        const response = await axios.get(`${ENDPOINT.promocion}`);
         setProductos(response.data);
       } catch (error) {
         console.error('Error al obtener los productos en tienda:', error);
