@@ -384,6 +384,11 @@ a {
     text-align: center;
   }
 }
+/* Navbar.css */
+
+  .hide-on-mobile {
+    display: none;
+  }
 
 .gallery-container {
   padding-top: 20rem;

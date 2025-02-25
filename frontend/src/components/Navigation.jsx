@@ -88,11 +88,11 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="navbar-brand">
         <img src="/pcsl.png" alt="logo" className="logo" />
-        <img src="/brand1.png" alt="brand1" className="brand" />
-        <img src="/brand2.png" alt="brand2" className="brand2" />
-        <img src="/brand3.png" alt="brand3" className="brand" />
-        <img src="/brand4.png" alt="brand4" className="brand" />
-        <img src="/paws.png" alt="paws" className="paws" />
+        <img src="/brand1.png" alt="brand1" className="brand hide-on-mobile"/>
+        <img src="/brand2.png" alt="brand2" className="brand2 hide-on-mobile"/>
+        <img src="/brand3.png" alt="brand3" className="brand hide-on-mobile"/>
+        <img src="/brand4.png" alt="brand4" className="brand hide-on-mobile"/>
+        <img src="/paws.png" alt="paws" className="paws hide-on-mobile"/>
       </div>
       <div className="opciones">
         {renderButtons()}
