@@ -6,7 +6,11 @@ const HomePerfil = () => {
   const { user } = useAuth();
   const { cargo, setCargo } = useContext(RolesContext);
 
+  
   useEffect(() => {
+    if (!user) {
+      return;
+    }
     if (user) {
       const userNombre = localStorage.getItem('userNombre');
       const userRol = localStorage.getItem('userRol');
