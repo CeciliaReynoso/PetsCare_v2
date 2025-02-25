@@ -35,7 +35,7 @@ const Navigation = () => {
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
             <button onClick={() => navigate('/tienda')} className='btn home-btn'>Tienda</button>
             <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Cerrar Sesión</button>
+            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
             <div className='cart-container' onClick={() => navigate('/cart')}>
               <img src='/carrito.png' alt='Carrito de compras' className='cart-icon' /> Total: {formatPrice(totalEnSoles)}
             </div>
@@ -48,7 +48,7 @@ const Navigation = () => {
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
             <button onClick={() => navigate('/admin')} className='btn home-btn'>Administrador</button>
             <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Cerrar sesión</button>
+            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
           </>
         );
       }
@@ -58,7 +58,7 @@ const Navigation = () => {
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
             <button onClick={() => navigate('/buyer')} className='btn home-btn'>Comprador</button>
             <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Cerrar sesión</button>
+            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
           </>
         );
       }
@@ -68,7 +68,7 @@ const Navigation = () => {
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
             <button onClick={() => navigate('/seller')} className='btn home-btn'>Vendedor</button>
             <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Cerrar sesión</button>
+            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
           </>
         );
       }
