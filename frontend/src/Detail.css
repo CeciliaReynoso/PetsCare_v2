@@ -30,11 +30,11 @@ p {
 }
 
 .add-to-cart-btn {
-  background-color: #28a745;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .back-to-store-btn {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-highlight);
+  color: var(--color-text);
 }
