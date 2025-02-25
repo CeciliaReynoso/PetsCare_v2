@@ -28,7 +28,7 @@ app.use("/", productosAdminRoutes);
 app.use("/", promocionesRoutes);
 app.use("/", tiendaRoutes);
 app.use("/", pedidosRouter);
-app.use("/", detallesRoutes);
+app.use("/", detalleRoutes);
 
 // Middleware de manejo de errores
 app.use(manejarErroresMiddleware);
