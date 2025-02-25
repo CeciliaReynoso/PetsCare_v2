@@ -75,10 +75,8 @@ const useAuth = () => {
     setUser(null);
     setToken(null);
     setAuthToken(null); // Eliminar el token de Axios      
-    navigate('/'); // Navegar a la página principal cuando el usuario es null
     window.location.href = '/';    
   };
-
   
   return { user, token, isLoading, logout };
 };

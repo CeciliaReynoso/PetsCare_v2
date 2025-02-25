@@ -12,9 +12,14 @@ const Navigation = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/');
   };
 
+  useEffect(() => {
+    if (!user) {
+      navigate('/');
+    }
+  }, [user, navigate]);
+  
   // Función para formatear el precio en soles peruanos
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN' }).format(price);
