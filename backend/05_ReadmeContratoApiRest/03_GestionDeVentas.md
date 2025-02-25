@@ -10,7 +10,7 @@
 
 2. Recepción del Pago:
 
-. El sistema de pago precesa la transacción
+. El sistema de pago procesa la transacción
 
 . Una vez confirmado el pago, el estado del pedido se actualiza a "pagado"
 
