@@ -9,7 +9,6 @@ const HomePerfil = () => {
   
   useEffect(() => {
     if (!user) {
-      navigate('/');
       return;
     }
     if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
