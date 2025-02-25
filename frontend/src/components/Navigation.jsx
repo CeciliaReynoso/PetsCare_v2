@@ -12,7 +12,6 @@ const Navigation = () => {
 
   const handleLogout = () => {
     logout();
-    window.location.href = '/';
   };
 
     // Función para formatear el precio en soles peruanos

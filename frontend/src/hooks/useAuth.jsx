@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
 import axios, { setAuthToken } from '../config/axiosConfig';
 import { useEncrypt } from './useEncrypt'; // Importar el hook de encriptación
 import { ENDPOINT } from '../config/constans';
@@ -8,7 +7,7 @@ const useAuth = () => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const { handleEncrypt, handleDecrypt } = useEncrypt(); // Usar el hook de encriptación
-  const navigate = useNavigate(); 
+  
 
   useEffect(() => {
     const storedToken = window.sessionStorage.getItem('token');
