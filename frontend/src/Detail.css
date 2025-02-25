@@ -30,8 +30,8 @@ p {
 }
 
 .add-to-cart-btn {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .back-to-store-btn {
