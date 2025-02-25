@@ -75,14 +75,12 @@ const useAuth = () => {
     setUser(null);
     setToken(null);
     setAuthToken(null); // Eliminar el token de Axios
+    useEffect((user) => {        
+          navigate('/'); // Navegar a la página principal cuando el usuario es null
+      }, [user, navigate]);    
   };
 
-  useEffect(() => {
-    if (user === null) {
-      navigate('/'); // Navegar a la página principal cuando el usuario es null
-    }
-  }, [user, navigate]);
-
+  
   return { user, token, isLoading, logout };
 };
 
