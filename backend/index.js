@@ -10,7 +10,7 @@ const promocionesRoutes = require('./routes/promocionesRoutes');
 const tiendaRoutes = require('./routes/tiendaRoutes');
 const bodyParser = require('body-parser');
 const pedidosRouter = require('./routes/pedidos');
-const detallesRoutes = require('./routes/detallesRoutes');
+const detallesRoutes = require('./routes/detalleRoutes');
 
 const app = express();
 
