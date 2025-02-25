@@ -54,19 +54,9 @@ const NuevaSubcategoria = () => {
   return (
     <div className="form-container">
       <div className="form-box">
-        <h1>Guardar cambios</h1>
+        <h1>Agregar Subcategoria</h1>
         {error && <p className="error">{error}</p>}
-        <form onSubmit={handleSubmit} className="form">
-          <label htmlFor="id_categoria">ID de Categoría</label>
-          <input
-            type="number"
-            id="id_categoria"
-            name="id_categoria"
-            value={formData.id_categoria}
-            onChange={handleChange}
-            required
-            className="input-wide"
-          />
+        <form onSubmit={handleSubmit} className="form">          
           <label htmlFor="nombre">Nombre</label>
           <input
             type="text"

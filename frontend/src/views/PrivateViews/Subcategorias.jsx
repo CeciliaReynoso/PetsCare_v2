@@ -115,7 +115,7 @@ const Subcategorias = () => {
     <div className="admin-container">
       <h1>Gestionar Subcategorías</h1>
       {error && <p className="error">{error}</p>}
-      <button onClick={() => navigate('/admin/subcategorias/nueva')} className="btn btn-primary">Agregar Nueva Subcategoría</button>
+      <button onClick={() => navigate('/admin/subcategorias/nueva')} className="btn btn-primary">Guardar cambios</button>
       <div className="form-container">
         <form onSubmit={handleSubmit} className="form-box">
           <label htmlFor="id_categoria">ID de Categoría</label>
