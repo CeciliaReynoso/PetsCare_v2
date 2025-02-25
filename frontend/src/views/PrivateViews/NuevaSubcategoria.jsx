@@ -18,6 +18,7 @@ const NuevaSubcategoria = () => {
 
   useEffect(() => {
     if (!user) {
+      navigate('/no-autorizado');
       return;
     }
 

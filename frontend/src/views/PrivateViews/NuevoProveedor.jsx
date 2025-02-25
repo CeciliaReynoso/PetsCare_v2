@@ -20,6 +20,7 @@ const NuevoProveedor = () => {
 
   useEffect(() => {
     if (!user) {
+      navigate('/no-autorizado');
       return;
     }
 

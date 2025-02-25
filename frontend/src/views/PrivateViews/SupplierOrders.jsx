@@ -16,6 +16,7 @@ const SupplierOrders = () => {
 
   useEffect(() => {
     if (!user) {
+      navigate('/no-autorizado');
       return;
     }
 
