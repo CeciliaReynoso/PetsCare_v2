@@ -31,10 +31,10 @@ const Navigation = () => {
       if (user.rol === roles.CLIENTE) {
         return (
           <>
-            <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
-            <button onClick={() => navigate('/tienda')} className='btn home-btn'>Tienda</button>
-            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
+            <button onClick={() => navigate('/')} className='btn home-btn nav-btn'>Inicio</button>
+            <button onClick={() => navigate('/tienda')} className='btn home-btn nav-btn'>Tienda</button>
+            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn nav-btn'>Perfil</button>
+            <button onClick={handleLogout} className='btn logout-btn nav-btn'>Logout</button>
             <div className='cart-container' onClick={() => navigate('/cart')}>
               <img src='/carrito.png' alt='Carrito de compras' className='cart-icon' /> Total: {formatPrice(totalEnSoles)}
             </div>
@@ -44,38 +44,38 @@ const Navigation = () => {
       if (user.rol === roles.ADMINISTRADOR) {
         return (
           <>
-            <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
-            <button onClick={() => navigate('/admin')} className='btn home-btn'>Administrador</button>
-            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
+            <button onClick={() => navigate('/')} className='btn home-btn nav-btn'>Inicio</button>
+            <button onClick={() => navigate('/admin')} className='btn home-btn nav-btn'>Administrador</button>
+            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn nav-btn'>Perfil</button>
+            <button onClick={handleLogout} className='btn logout-btn nav-btn'>Logout</button>
           </>
         );
       }
       if (user.rol === roles.COMPRADOR) {
         return (
           <>
-            <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
-            <button onClick={() => navigate('/buyer')} className='btn home-btn'>Comprador</button>
-            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
+            <button onClick={() => navigate('/')} className='btn home-btn nav-btn'>Inicio</button>
+            <button onClick={() => navigate('/buyer')} className='btn home-btn nav-btn'>Comprador</button>
+            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn nav-btn'>Perfil</button>
+            <button onClick={handleLogout} className='btn logout-btn nav-btn'>Logout</button>
           </>
         );
       }
       if (user.rol === roles.VENDEDOR) {
         return (
           <>
-            <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
-            <button onClick={() => navigate('/seller')} className='btn home-btn'>Vendedor</button>
-            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
+            <button onClick={() => navigate('/')} className='btn home-btn nav-btn'>Inicio</button>
+            <button onClick={() => navigate('/seller')} className='btn home-btn nav-btn'>Vendedor</button>
+            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn nav-btn'>Perfil</button>
+            <button onClick={handleLogout} className='btn logout-btn nav-btn'>Logout</button>
           </>
         );
       }
     } else {
       return (
         <>
-          <button onClick={() => navigate('/login')} className='btn login-btn'>Iniciar sesión</button>
-          <button onClick={() => navigate('/register')} className='btn register-btn'>Registrarse</button>
+          <button onClick={() => navigate('/login')} className='btn login-btn nav-btn'>Iniciar sesión</button>
+          <button onClick={() => navigate('/register')} className='btn register-btn nav-btn'>Registrarse</button>
           <div className='cart-container' onClick={() => navigate('/cart')}>
             <img src="/carrito.png" alt='Carrito de compras' className='cart-icon' />
           </div>

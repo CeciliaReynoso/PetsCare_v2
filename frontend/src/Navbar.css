@@ -84,6 +84,10 @@
     .hide-on-mobile {
       display: none;
     }
+
+    .nav-btn {
+      border: none;
+    }
     
     .navbar {
       margin:10px;
