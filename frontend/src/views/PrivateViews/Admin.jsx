@@ -28,7 +28,7 @@ const Admin = () => {
           return;
         }
       }, [user, navigate]);
-
+      if (user.rol === 'ADMINISTRADOR') {
   return (
     <div className="admin-container">
       <h1>Administración</h1>
@@ -41,5 +41,5 @@ const Admin = () => {
     </div>
   );
   };
-
+}
 export default Admin;
