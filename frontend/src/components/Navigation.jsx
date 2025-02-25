@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
-import { Roles } from '../helpers/roles';
+import { roles } from '../helpers/roles';
 import { useCart } from '../hooks/useCart';
 import '../Navbar.css';
 
@@ -35,7 +35,7 @@ const Navigation = () => {
 
   const renderButtons = () => {
     if (user) {
-      if (user.rol === Roles.CLIENTE) {
+      if (user.rol === roles.CLIENTE) {
         return (
           <>
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
@@ -48,7 +48,7 @@ const Navigation = () => {
           </>
         );
       }
-      if (user.rol === Roles.ADMINISTRADOR) {
+      if (user.rol === roles.ADMINISTRADOR) {
         return (
           <>
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
@@ -58,7 +58,7 @@ const Navigation = () => {
           </>
         );
       }
-      if (user.rol === Roles.COMPRADOR) {
+      if (user.rol === roles.COMPRADOR) {
         return (
           <>
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
@@ -68,7 +68,7 @@ const Navigation = () => {
           </>
         );
       }
-      if (user.rol === Roles.VENDEDOR) {
+      if (user.rol === roles.VENDEDOR) {
         return (
           <>
             <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>

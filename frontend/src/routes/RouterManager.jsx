@@ -24,7 +24,7 @@ import LowStockProducts from '../views/PrivateViews/LowStockProducts';
 import IncompleteOrders from '../views/PrivateViews/IncompleteOrders';
 import BuyerLayout from '../layouts/BuyerLayout';
 import SellerLayout from '../layouts/SellerLayout';
-import { ROLES } from '../helpers/roles';
+import { roles } from '../helpers/roles';
 import { RolesProvider } from '../context/RolesContext';
 import useAuth from '../hooks/useAuth';
 import Proveedores from '../views/PrivateViews/Proveedores';
@@ -51,10 +51,10 @@ export const RouterManager = () => {
             <Route path="/tienda" element={<TiendaLayout />} />  
             <Route path="/detail/:id" element={<Detail />} />        
             
-            <Route path="/" element={!user || user?.rol === ROLES.CLIENTE ? <MainLayout /> : <AdminLayout />}>
+            <Route path="/" element={!user || user?.rol === roles.CLIENTE ? <MainLayout /> : <AdminLayout />}>
               <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />}/>
-              <Route path="/profile" element={<AuthGuard allowedRoles={[ROLES.ADMIN, ROLES.COMPRADOR, ROLES.VENDEDOR, ROLES.CLIENTE]}><Profile /></AuthGuard>} />
+              <Route path="/profile" element={<AuthGuard allowedRoles={[roles.ADMIN, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Profile /></AuthGuard>} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/detail/:id" element={<Detail />} />
               <Route path="/home-perfil" element={<HomePerfil />} />
