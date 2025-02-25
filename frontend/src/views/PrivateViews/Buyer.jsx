@@ -17,9 +17,8 @@ const Buyer = () => {
     }
   }, [setCargo]);
 
-  useEffect(() => {
+  useEffect((user) => {
     if (!user) {
-      navigate('/');
       return;
     }
 

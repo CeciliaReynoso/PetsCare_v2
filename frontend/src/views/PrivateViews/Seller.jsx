@@ -6,9 +6,8 @@ const Seller = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-        useEffect(() => {
+        useEffect((user) => {
           if (!user) {
-            navigate('/');
             return;
           }
       

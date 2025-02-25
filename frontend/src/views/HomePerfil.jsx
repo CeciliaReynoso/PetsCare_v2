@@ -7,12 +7,12 @@ const HomePerfil = () => {
   const { cargo, setCargo } = useContext(RolesContext);
 
   
-  useEffect(() => {
+  useEffect((user) => {
     if (!user) {
       return;
     }
     if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
-      navigate('/no-autorizado');
+      navigate('/');
       return;
     }
     if (user) {

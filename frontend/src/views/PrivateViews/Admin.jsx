@@ -17,9 +17,8 @@ const Admin = () => {
       }
     }, [setCargo]);
 
-      useEffect(() => {
+      useEffect((user) => {
         if (!user) {
-         navigate('/');
           return;
         }
     
