@@ -92,6 +92,7 @@
     .navbar {
       margin:10px;
       padding: 5px;
+      background-color: transparent;
       flex-direction: column;
       align-items: center;
       height: auto;
@@ -125,12 +126,13 @@
     .navbar .opciones {
       flex-direction: column;
       align-items: center;
-      width: 50%;
+      width: 60%;
     }
   
     .navbar .opciones button {
       margin: 10px 0;
       width: 100%;
       text-align: center;
+      border: none;
     }
   }
