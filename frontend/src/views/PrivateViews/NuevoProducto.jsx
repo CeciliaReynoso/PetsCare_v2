@@ -44,7 +44,7 @@ const NuevoProducto = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${ENDPOINT.productoAdmin}`, formData, {
+      await axios.post(`${ENDPOINT.productosAdmin}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
