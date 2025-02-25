@@ -16,6 +16,7 @@ export const ENDPOINT = {
   product: `${URLBASE}/productos/:id`, 
   promocion: `${URLBASE}/productos/promocion`,
   tienda: `${URLBASE}/productos/tienda`,
+  detail: `${URLBASE}/detalle/:id`,
 
   // Endpoints privados
   users: `${URLBASE}/usuarios`,

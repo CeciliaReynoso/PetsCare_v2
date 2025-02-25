@@ -31,10 +31,10 @@ const Navigation = () => {
       if (user.rol === roles.CLIENTE) {
         return (
           <>
-            <button onClick={() => navigate('/')} className='btn home-btn nav-btn'>Inicio</button>
-            <button onClick={() => navigate('/tienda')} className='btn home-btn nav-btn'>Tienda</button>
-            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn nav-btn'>Perfil</button>
-            <button onClick={handleLogout} className='btn logout-btn nav-btn'>Logout</button>
+            <button onClick={() => navigate('/')} className='btn home-btn'>Inicio</button>
+            <button onClick={() => navigate('/tienda')} className='btn home-btn'>Tienda</button>
+            <button onClick={() => navigate('/home-perfil')} className='btn profile-btn'>Perfil</button>
+            <button onClick={handleLogout} className='btn logout-btn'>Logout</button>
             <div className='cart-container' onClick={() => navigate('/cart')}>
               <img src='/carrito.png' alt='Carrito de compras' className='cart-icon' /> Total: {formatPrice(totalEnSoles)}
             </div>

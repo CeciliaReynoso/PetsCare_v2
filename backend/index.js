@@ -10,18 +10,11 @@ const promocionesRoutes = require('./routes/promocionesRoutes');
 const tiendaRoutes = require('./routes/tiendaRoutes');
 const bodyParser = require('body-parser');
 const pedidosRouter = require('./routes/pedidos');
+const detallesRoutes = require('./routes/detallesRoutes');
 
 const app = express();
 
 app.use(express.json());
-
-// app.use(cors({
-//   origin: [
-//     process.env.NODE_ENV == 'production'
-//     ? "https://petscare-v2.onrender.com"
-//     : "https://localhost:5173"],
-
-// }));
 
 app.use(cors());
 
@@ -35,6 +28,7 @@ app.use("/", productosAdminRoutes);
 app.use("/", promocionesRoutes);
 app.use("/", tiendaRoutes);
 app.use("/", pedidosRouter);
+app.use("/", detallesRoutes);
 
 // Middleware de manejo de errores
 app.use(manejarErroresMiddleware);
