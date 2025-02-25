@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
 import axios, { setAuthToken } from '../config/axiosConfig';
 import { useEncrypt } from './useEncrypt'; // Importar el hook de encriptación
 import { ENDPOINT } from '../config/constans';
@@ -8,7 +7,6 @@ const useAuth = () => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const { handleEncrypt, handleDecrypt } = useEncrypt(); // Usar el hook de encriptación
-  const navigate = useNavigate(); 
 
   useEffect(() => {
     const storedToken = window.sessionStorage.getItem('token');
@@ -71,18 +69,12 @@ const useAuth = () => {
     window.sessionStorage.removeItem('userNombre');
     window.sessionStorage.removeItem('userRol');
     window.sessionStorage.removeItem('userDireccion');
-    window.sessionStorage.removeItem('userId');
+    window.sessionStorage.setItem('userId', response.data.id);
     setUser(null);
     setToken(null);
     setAuthToken(null); // Eliminar el token de Axios
-    navigate('/'); // Navegar a la página principal
+    // window.location.href = '/';
   };
-
-  useEffect(() => {
-    if (!user) {
-      navigate('/'); // Navegar a la página principal cuando el usuario es null
-    }
-  }, [user, navigate]);
 
   return { user, token, isLoading, logout };
 };
