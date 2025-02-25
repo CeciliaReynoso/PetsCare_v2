@@ -11,6 +11,9 @@ const HomePerfil = () => {
     if (!user) {
       return;
     }
+    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
+      return;
+    }
     if (user) {
       const userNombre = localStorage.getItem('userNombre');
       const userRol = localStorage.getItem('userRol');
