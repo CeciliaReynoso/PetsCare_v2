@@ -12,16 +12,10 @@ const Navigation = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/tienda');
+    window.location.href = '/';
   };
 
-  useEffect(() => {
-    if (!user) {
-      navigate('/tienda');
-    }
-  }, [user, navigate]);
-  
-  // Función para formatear el precio en soles peruanos
+    // Función para formatear el precio en soles peruanos
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN' }).format(price);
   };
