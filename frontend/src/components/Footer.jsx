@@ -1,5 +1,5 @@
 import React from 'react';
-import { ROLES } from '../helpers/roles';
+import { roles } from '../helpers/roles';
 
 const Footer = () => {
 
