@@ -6,15 +6,15 @@ import Footer  from '../components/Footer';
 
 const TiendaLayout = () => {
   return (
-    <div> 
-      <main className='fix-container'>
-      <Navigation />
-      <TiendaGallery />            
-      <Footer />
-      <Outlet />
+    <section className='fix-container'> 
+      <main >
+        <Navigation />
+        <TiendaGallery />           
+        <Outlet />
       </main>
+      <Footer />
       <div/>
-    </div>
+    </section>
   );
 };
 

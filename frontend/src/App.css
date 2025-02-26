@@ -61,7 +61,7 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .app-container {
@@ -72,7 +72,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 45%;
+  min-height: 100vh;
 }
 .fix-container {  
   padding-top: 4rem;
