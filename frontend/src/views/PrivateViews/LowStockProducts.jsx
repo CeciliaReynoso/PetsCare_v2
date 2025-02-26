@@ -38,6 +38,7 @@ const LowStockProducts = () => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+      },
       });
       setProductos(response.data);
     } catch (error) {

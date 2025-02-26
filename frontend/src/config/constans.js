@@ -28,7 +28,7 @@ export const ENDPOINT = {
   category: `${URLBASE}/categoria`,
   orders: `${URLBASE}/pedidos_proveedor/:id/validar`,  
   supplierOrders: `${URLBASE}/pedidos_proveedor`,
-  lowStockProducts: `${URLBASE}/productos/stock-minimo`,
+  lowStockProducts: `${URLBASE}/buyer/stock-minimo`,
   proveedores: `${URLBASE}/proveedores`,
   proveedor: `${URLBASE}/proveedores/:id`,
   subcategorias: `${URLBASE}/subcategorias`,
