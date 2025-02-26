@@ -12,7 +12,6 @@ const TiendaLayout = () => {
         <TiendaGallery />           
         <Outlet />
       </main>
-      <Footer />
       <div/>
     </section>
   );

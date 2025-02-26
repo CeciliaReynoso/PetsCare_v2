@@ -15,7 +15,9 @@ const MainLayout = () => {
       <ProductGallery />
         <Outlet />
       </main>
+      <Footer />
     </div>
+    
   );
 };
 
