@@ -1,4 +1,4 @@
-const { DB } = require('../config/db');
+                                                const { DB } = require('../config/db');
 
 const obtenerProductosConStockMinimo = async () => {
   const { rows } = await DB.query(`
