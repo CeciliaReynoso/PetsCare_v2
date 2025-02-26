@@ -11,6 +11,7 @@ const tiendaRoutes = require('./routes/tiendaRoutes');
 const bodyParser = require('body-parser');
 const pedidosRouter = require('./routes/pedidos');
 const detalleRoutes = require('./routes/detalleRoutes');
+const stockMinimoRoutes = require('./routes/stockMinimoRoutes');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use("/", promocionesRoutes);
 app.use("/", tiendaRoutes);
 app.use("/", pedidosRouter);
 app.use("/", detalleRoutes);
+app.use("/", stockMinimoRoutes);
 
 // Middleware de manejo de errores
 app.use(manejarErroresMiddleware);
