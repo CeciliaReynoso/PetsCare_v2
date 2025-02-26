@@ -46,10 +46,15 @@ const LowStockProducts = () => {
         <ul>
           {productos.map((producto) => (
             <li key={producto.id_producto}>
-              <p>Nombre: {producto.nombre}</p>
+              <p>Nombre: {producto.producto_nombre}</p>
               <p>Descripción: {producto.descripcion}</p>
               <p>Stock Actual: {producto.stock_actual}</p>
               <p>Stock Mínimo: {producto.stock_minimo}</p>
+              <p>Proveedor: {producto.proveedor_nombre}</p>
+              <p>Contacto: {producto.contacto}</p>
+              <p>Dirección: {producto.direccion}</p>
+              <p>Teléfono: {producto.telefono}</p>
+              <p>Email: {producto.email}</p>
             </li>
           ))}
         </ul>
