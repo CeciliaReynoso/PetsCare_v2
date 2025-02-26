@@ -7,8 +7,7 @@ import ProductGallery from '../components/ProductGallery';
 // import Footer from '../components/Footer';
 
 const MainLayout = () => {
-  return (
-   
+  return (   
     <div className='app-container'>
       <main>
       <Navigation />
