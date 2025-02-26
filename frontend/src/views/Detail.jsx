@@ -34,7 +34,7 @@ const Detail = () => {
       <h1>{product.nombre}</h1>
       <p>{product.descripcion}</p>
       <p><strong>Subcategoría:</strong> {product.subcategoria_descripcion}</p>
-      <p><strong>Proveedor:</strong> {product.proveedor_nombre}</p>
+      <p><strong>Marca:</strong> {product.proveedor_nombre}</p>
       <button onClick={() => addToCart(product)} className="btn add-to-cart-btn">Añadir al carrito</button>
       <button onClick={() => navigate('/tienda')} className="btn back-to-store-btn">Volver a la tienda</button>
     </div>
