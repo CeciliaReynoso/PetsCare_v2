@@ -59,11 +59,7 @@ const useAuth = () => {
       window.sessionStorage.setItem('userId', response.data.id);
       return userResponse.data;
     } catch (error) {
-      console.error('Error al iniciar sesión:', error.response?.data || error.message);
-      // Redirigir a la página de registro si el usuario no está registrado
-      if (error.response?.status === 401 || error.response?.status === 500) {
-        navigate('/register');
-      }
+      console.error('Error al iniciar sesión:', error.response.data);
       throw error;
     }
   };

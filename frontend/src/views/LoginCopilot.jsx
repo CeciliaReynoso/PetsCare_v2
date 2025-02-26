@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {useAuth} from '../hooks/useAuth';
-import axios from '../config/axiosConfig';
-import { ENDPOINT } from '../config/constans';
+import useAuth from '../hooks/useAuth';
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-const initialForm = { email: 'Ingrese email', password: '******' };
+const initialForm = { email: '', password: '' };
 
 const Login = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(initialForm);
-  const { handleSession } = useAuth();
+  const { isLoading } = useAuth();
 
   const handleUser = (event) => setUser({ ...user, [event.target.name]: event.target.value });
 
@@ -26,16 +24,12 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post(ENDPOINT.login, { email: user.email, password: user.password });
-      const { token } = response.data;
-      const decodedToken = JSON.parse(atob(token.split('.')[1])); // Decodificar el token JWT
-      const { rol } = decodedToken;
-      handleSession({ token, email: user.email, role: rol });
+      const loggedInUser = await isLoading(user.email, user.password);
       window.alert('Usuario identificado con éxito 😀.');
       setUser(initialForm); // Restablecer el formulario
 
       // Navegar según el rol del usuario
-      if (rol === 'admin') {
+      if (loggedInUser.role === 'ADMINISTRADOR') {
         navigate('/admin'); // Navegar a la vista Admin para Administradores
       } else {
         navigate('/'); // Navegar a la página de inicio para otros usuarios
@@ -43,37 +37,44 @@ const Login = () => {
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
       window.alert(`${error.response?.data?.message || error.message} 🙁.`);
+      
+      // Redirigir a la página de registro si el usuario no está registrado
+      if (error.response?.status === 401) {
+        navigate('/register');
+      }
     }
   };
 
   return (
-    <form onSubmit={handleForm} className='col-10 col-sm-6 col-md-3 m-auto mt-5'>
-      <h1>Iniciar Sesión</h1>
-      <hr />
-      <div className='form-group mt-1 '>
-        <label>Email address</label>
-        <input
-          placeholder='Enter email'
-          value={user.email}
-          onChange={handleUser}
-          type='email'
-          name='email'
-          className='form-control'
-        />
-      </div>
-      <div className='form-group mt-1 '>
-        <label>Password</label>
-        <input
-          placeholder='Password'
-          value={user.password}
-          onChange={handleUser}
-          type='password'
-          name='password'
-          className='form-control' 
-        />
-      </div>
-      <button type='submit' className='btn btn-light mt-3'>Iniciar Sesión</button>
-    </form>
+    <div className='fix-container'>
+      <form onSubmit={handleForm} className='form-container'>
+        <h1 className='form-title'>Iniciar Sesión</h1>
+        <hr />
+        <div className='form-group'>
+          <label>Email address</label>
+          <input
+            placeholder='Ingrese su email'
+            value={user.email}
+            onChange={handleUser}
+            type='email'
+            name='email'
+            className='form-control'
+          />
+        </div>
+        <div className='form-group'>
+          <label>Password</label>
+          <input
+            placeholder='Ingrese su contraseña'
+            value={user.password}
+            onChange={handleUser}
+            type='password'
+            name='password'
+            className='form-control'
+          />
+        </div>
+        <button type='submit' className='btn btn-light mt-3'>Iniciar Sesión</button>
+      </form>
+    </div>
   );
 };
 
