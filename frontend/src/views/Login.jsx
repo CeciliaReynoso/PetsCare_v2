@@ -44,11 +44,11 @@ const Login = () => {
   return (
     <div className='fix-container'>
     <Navigation />
-    <section className="recent-posts">      
+    <div>      
         <Link to="/tienda" className="tienda-link">
         <img src="/tienda.png" alt="Tienda" className="tienda-icon" /><span>Pulsa aquí para ver más productos</span>
         </Link>
-    </section>
+    </div>
     <form onSubmit={handleForm} className='form-container'>
       <h1 className='form-title'>Iniciar Sesión</h1>
       <hr />
