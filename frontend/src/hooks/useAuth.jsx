@@ -2,14 +2,12 @@ import { useState, useEffect } from 'react';
 import axios, { setAuthToken } from '../config/axiosConfig';
 import { useEncrypt } from './useEncrypt'; // Importar el hook de encriptación
 import { ENDPOINT } from '../config/constans';
-import { useNavigate } from 'react-router-dom';
 
 const useAuth = () => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const { handleEncrypt, handleDecrypt } = useEncrypt(); // Usar el hook de encriptación
-  const navigate = useNavigate();
-
+  
   useEffect(() => {
     const storedToken = window.sessionStorage.getItem('token');
     const encryptedEmail = window.sessionStorage.getItem('email');
@@ -61,9 +59,9 @@ const useAuth = () => {
       return userResponse.data;
     } catch (error) {
       console.error('Error al iniciar sesión:', error.response?.data || error.message);
-      // Redirigir a la página de registro si el usuario no está registrado
+      // Mostrar un mensaje si el usuario no está registrado
       if (error.response?.status === 401 || error.response?.status === 500) {
-        navigate('/register');
+        alert('Usuario no registrado. Por favor, regístrese.');
       }
       throw error;
     }
