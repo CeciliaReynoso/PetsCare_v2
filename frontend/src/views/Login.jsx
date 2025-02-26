@@ -42,9 +42,9 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className='app-container'>
     <Navigation />
-    <div>      
+    <div className='recent-posts'>      
         <Link to="/tienda" className="tienda-link">
         <img src="/tienda.png" alt="Tienda" className="tienda-icon" /><span>Pulsa aquí para ver más productos</span>
         </Link>
