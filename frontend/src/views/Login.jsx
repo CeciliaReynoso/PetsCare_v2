@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
-
+import Navigation from '../components/Navigation';
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const initialForm = { email: '', password: '' };
 
@@ -42,6 +42,7 @@ const Login = () => {
 
   return (
     <div className='fix-container'>
+    <Navigation />
     <form onSubmit={handleForm} className='form-container'>
       <h1 className='form-title'>Iniciar Sesión</h1>
       <hr />
