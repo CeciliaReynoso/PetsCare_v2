@@ -18,7 +18,7 @@ const LowStockProducts = () => {
       return;
     }
 
-    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR') {
+    if (user.rol !== 'COMPRADOR') {
       navigate('/no-autorizado');
       return;
     }
