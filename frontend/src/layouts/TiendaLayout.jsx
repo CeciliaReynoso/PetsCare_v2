@@ -9,10 +9,10 @@ const TiendaLayout = () => {
     <div> 
       <main className='fix-container'>
       <Navigation />
-      <TiendaGallery />
-        <Outlet />
-      </main>
+      <TiendaGallery />            
       <Footer />
+      <Outlet />
+      </main>
       <div/>
     </div>
   );
