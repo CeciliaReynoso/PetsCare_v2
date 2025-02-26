@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <div className='fix-container'>
+    <div>
     <Navigation />
     <div>      
         <Link to="/tienda" className="tienda-link">
