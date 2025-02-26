@@ -4,8 +4,8 @@ const getLowStockProducts = async (req, res) => {
   try {
     const query = `
       SELECT 
-        p.id_producto, p.nombre AS producto_nombre, p.descripcion, p.precio_venta, p.precio_costo, 
-        p.stock_actual, p.stock_minimo, p.imagen_url, 
+        p.id_producto, p.nombre AS producto_nombre, p.descripcion, p.precio_costo, 
+        p.stock_actual, p.stock_minimo,
         pr.id_proveedor, pr.nombre AS proveedor_nombre, pr.contacto, pr.direccion, pr.telefono, pr.email
       FROM 
         productos p
