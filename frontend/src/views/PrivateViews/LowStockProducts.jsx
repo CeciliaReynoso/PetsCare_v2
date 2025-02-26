@@ -34,7 +34,7 @@ const LowStockProducts = () => {
 
   const fetchProductos = async () => {
     try {
-      const response = await axios.get(ENDPOINT.lowStockProducts, {
+      const response = await axios.get(`${ENDPOINT.lowStockProducts}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
