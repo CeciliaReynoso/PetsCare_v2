@@ -320,7 +320,11 @@ a {
   background: var(--color-accent);
   color: var(--color-secondary);
 }
-
+.list-item {
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 20px;
+}
+  
 .footer {
   background: var(--color-primary);
   color: var(--color-secondary);

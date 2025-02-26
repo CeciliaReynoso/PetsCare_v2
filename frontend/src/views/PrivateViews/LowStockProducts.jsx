@@ -39,13 +39,13 @@ const LowStockProducts = () => {
 
   return (
     <div>
-      <h1>Listado de Productos menor o igual al Stock Mínimo</h1>
+      <h1>Listado de Productos con bajo stock</h1>
       {productos.length === 0 ? (
         <p>No hay productos con stock mínimo.</p>
       ) : (
         <ul>
           {productos.map((producto) => (
-            <li key={producto.id_producto}>
+            <li key={producto.id_producto} className='list-item'>
               <p>Nombre: {producto.producto_nombre}</p>
               <p>Descripción: {producto.descripcion}</p>
               <p>Stock Actual: {producto.stock_actual}</p>
