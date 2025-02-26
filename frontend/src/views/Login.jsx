@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const initialForm = { email: '', password: '' };
 
@@ -42,7 +43,7 @@ const Login = () => {
   };
 
   return (
-    <div className='app-container'>
+    <div className='fix-container'>
     <Navigation />
     <div className='recent-posts'>      
         <Link to="/tienda" className="tienda-link">
@@ -76,6 +77,7 @@ const Login = () => {
       </div>
       <button type='submit' className='btn btn-light mt-3'>Iniciar Sesión</button>
     </form>
+    <Footer />
     </div>
   );
 };
