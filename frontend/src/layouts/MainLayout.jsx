@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';  
 import RecentPosts from '../components/RecentPosts';  
 import ProductGallery from '../components/ProductGallery';  
-// import Footer from '../components/Footer';
+import Footer from '../components/Footer';
 
 const MainLayout = () => {
   return (   
