@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import Navigation from '../components/Navigation';
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -43,6 +44,11 @@ const Login = () => {
   return (
     <div className='fix-container'>
     <Navigation />
+    <section className="recent-posts">      
+        <Link to="/tienda" className="tienda-link">
+        <img src="/tienda.png" alt="Tienda" className="tienda-icon" /><span>Pulsa aquí para ver más productos</span>
+        </Link>
+    </section>
     <form onSubmit={handleForm} className='form-container'>
       <h1 className='form-title'>Iniciar Sesión</h1>
       <hr />
