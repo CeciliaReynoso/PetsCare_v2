@@ -10,12 +10,14 @@ const MainLayout = () => {
   return (
    
     <div className='app-container'>
+    <div className='fix-container'>
       <main>
       <Navigation />
       <ProductGallery />
       {/* <Footer /> */}
         <Outlet />
       </main>
+    </div>
     </div>
   );
 };
