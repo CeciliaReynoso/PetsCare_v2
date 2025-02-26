@@ -39,7 +39,7 @@ const LowStockProducts = () => {
 
   return (
     <div>
-      <h1>Listado de Productos con Stock Mínimo</h1>
+      <h1>Listado de Productos menor o igual al Stock Mínimo</h1>
       {productos.length === 0 ? (
         <p>No hay productos con stock mínimo.</p>
       ) : (

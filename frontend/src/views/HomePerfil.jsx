@@ -27,12 +27,14 @@ const HomePerfil = () => {
 
   return (
     <div className='home-perfil-container'>
+      <div>
       <h3>Mi Perfil</h3>
       <p>Datos registrados</p>
       <p>Nombre: {user?.nombre}</p>
       <p>Rol: {user?.rol}</p>
       <p>Dirección: {user?.direccion}</p>
       <p>Email: {user?.email}</p>
+      </div>
     </div>
   );
 };
