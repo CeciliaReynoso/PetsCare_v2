@@ -13,9 +13,9 @@ const AuthGuard = ({ allowedRoles }) => {
     return <Navigate to="/no-autorizado" />;
   }
 
-  if (allowedRoles.includes(userRol)) {
-    return <Outlet />;
-  }
+  // if (allowedRoles.includes(userRol)) {
+  //   return <Outlet />;
+  // }
 
   return < Outlet/>;
 };
