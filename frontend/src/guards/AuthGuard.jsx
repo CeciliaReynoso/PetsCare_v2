@@ -3,7 +3,7 @@ import useAuth from '../hooks/useAuth';
 
 const AuthGuard = ({ allowedRoles }) => {
   const { user } = useAuth();
-  const userRol = user?.rol;
+  const userRol = window.sessionStorage.getItem('userRol');
 
   if (!user || !userRol) {
     return <Navigate to="/" />;
