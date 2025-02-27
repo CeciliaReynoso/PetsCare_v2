@@ -223,9 +223,10 @@ a {
   }
   
   .card {
+    display: flex;
     flex: 1 1 calc(33.333% - 1.25rem);  
     max-width: 18rem; /* Equivalente a 300px si 1rem es 16px */
-    height: 35rem;
+    height: 30rem;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 8px;
