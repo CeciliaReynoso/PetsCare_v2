@@ -8,11 +8,7 @@ const HomePerfil = () => {
 
   
   useEffect(() => {
-      if (!user || user.rol !== 'COMPRADOR' || user.rol !== 'ADMINISTRADOR' || user.rol !== 'CLIENTE') {
-      navigate('/no-autorizado');
-      return;
-    }
-    if (user) {
+      if (user) {
       const userNombre = localStorage.getItem('userNombre');
       const userRol = localStorage.getItem('userRol');
       const userEmail = localStorage.getItem('userEmail');
