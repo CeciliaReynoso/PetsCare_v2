@@ -3,27 +3,27 @@ import RolesContext from '../context/RolesContext';
 import useAuth from '../hooks/useAuth';
 
 const HomePerfil = () => {
-  const { user, isLoading } = useAuth();
+  const { user } = useAuth();
   const { cargo, setCargo } = useContext(RolesContext);
 
   
   useEffect(() => {
-    if (!isLoading) {
+    if (!user) {
       return;
     }
     if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
       navigate('/no-autorizado');
       return;
     }
-    if (isLoading) {
-      const userNombre = window.sessionStorage.getItem('userNombre');
-      const userRol = window.sessionStorage.getItem('userRol');
-      const userEmail = window.sessionStorage.getItem('userEmail');
-      const userDireccion = window.sessionStorage.getItem('userDireccion');
+    if (user) {
+      const userNombre = localStorage.getItem('userNombre');
+      const userRol = localStorage.getItem('userRol');
+      const userEmail = localStorage.getItem('userEmail');
+      const userDireccion = localStorage.getItem('userDireccion');
       
       setCargo({ nombre: userNombre, rol: userRol, email: userEmail, direccion: userDireccion });
     }
-  }, [user, setCargo, isLoading]);
+  }, [user, setCargo]);
 
   return (
     <div className='home-perfil-container'>
