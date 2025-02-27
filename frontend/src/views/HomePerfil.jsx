@@ -26,6 +26,7 @@ const HomePerfil = () => {
   }, [user, setCargo]);
 
   return (
+    <div className='fix-container'>
     <div className='home-perfil-container'>
       <h3>Mi Perfil</h3>
       <p>Datos registrados</p>
@@ -33,6 +34,7 @@ const HomePerfil = () => {
       <p>Rol: {user?.rol}</p>
       <p>Dirección: {user?.direccion}</p>
       <p>Email: {user?.email}</p>
+    </div>
     </div>
   );
 };
