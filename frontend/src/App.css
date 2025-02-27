@@ -87,6 +87,7 @@ body {
   padding-top: 10rem;
 }
 .home-perfil-container {
+  z-index: 1;
   padding-top: 9rem;
 }
 .perfil-container {
