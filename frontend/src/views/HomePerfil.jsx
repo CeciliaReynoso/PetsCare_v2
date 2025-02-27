@@ -40,7 +40,7 @@ const HomePerfil = () => {
   }
 
   return (
-    <div className='home-perfil-container fix-container'>
+    <div className='home-perfil-container'>
       <h3>Mi Perfil</h3>
       <p>Datos registrados</p>
       <p>Nombre: {userNombre}</p>
