@@ -57,7 +57,7 @@ export const RouterManager = () => {
               <Route path="/detail/:id" element={<Detail />} />
               <Route path="/productos-promocion" element={<ProductGallery />} />
               <Route path="/profile" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Profile /></AuthGuard>} />
-              <Route path="/home-perfil" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><HomePerfil /></AuthGuard>} />
+              <Route path="/home-perfil" element={<HomePerfil />} />
             </Route>
 
             {/* Rutas protegidas para administradores */}
