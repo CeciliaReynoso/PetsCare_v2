@@ -11,10 +11,10 @@ const HomePerfil = () => {
     if (!user) {
       return;
     }
-    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
-      navigate('/');
-      return;
-    }
+    // if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
+    //   navigate('/');
+    //   return;
+    // }
     if (user) {
       const userNombre = window.sessionStorage.getItem('userNombre');
       const userRol = window.sessionStorage.getItem('userRol');
