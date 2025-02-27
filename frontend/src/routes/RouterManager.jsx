@@ -51,13 +51,13 @@ export const RouterManager = () => {
             <Route path="/tienda" element={<TiendaLayout />} />  
             <Route path="/detail/:id" element={<Detail />} />        
 
-            <Route path="/" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}> <MainLayout /></AuthGuard>}>
+            <Route path="/" element={<AuthGuard allowedRoles={!user ||[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}> <MainLayout /></AuthGuard>}>
               <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />}/>
               <Route path="/profile" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Profile /></AuthGuard>} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/detail/:id" element={<Detail />} />
-              <Route path="/home-perfil" element={<HomePerfil />} />
+              <Route path="/home-perfil" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><HomePerfil /></AuthGuard>} />
               <Route path="/productos-promocion" element={<ProductGallery />} />
             </Route>
 
