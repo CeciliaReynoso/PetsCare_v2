@@ -61,7 +61,7 @@ export const RouterManager = () => {
               <Route path="/productos-promocion" element={<ProductGallery />} />
             </Route>
 
-            <Route path="/admin" element={!user || user?.rol === roles.ADMINISTRADOR ? <MainLayout /> : <AdminLayout />}>
+            <Route path="/admin" element={user?.rol === roles.ADMINISTRADOR ?  <AdminLayout /> : <MainLayout />}>
               <Route index element={<Admin />} />        
               <Route path="/admin/users" element={<UserManagement />} />
               <Route path="/admin/users/edit-user/:id" element={<EditUserForm />} />
@@ -74,7 +74,7 @@ export const RouterManager = () => {
               <Route path="/admin/subcategorias/nueva" element={<NuevaSubcategoria />} />
             </Route>
 
-            <Route path="/buyer" element={!user || user?.rol === roles.COMPRADOR ?<MainLayout /> : <BuyerLayout />}>
+            <Route path="/buyer" element={user?.rol === roles.COMPRADOR ? <BuyerLayout /> : <MainLayout />}>
               <Route index element={<Buyer />} />
               <Route path="/buyer/orders" element={<SupplierOrders />} />
               <Route path="/buyer/low-stock-products" element={<LowStockProducts />} />
@@ -84,7 +84,7 @@ export const RouterManager = () => {
               <Route path="/buyer/subcategorias/nueva" element={<NuevaSubcategoria />} />
             </Route>
 
-            <Route path="/seller" element={!user || user?.rol === roles.COMPRADOR ?<MainLayout /> : <SellerLayout />}>
+            <Route path="/seller" element={user?.rol === roles.VENDEDOR ? <SellerLayout /> : <MainLayout />}>
               <Route index element={<Seller />} />
               <Route path="/seller/orders" element={<CustomerOrders />} />
               <Route path="/seller/incomplete-orders" element={<IncompleteOrders />} />
