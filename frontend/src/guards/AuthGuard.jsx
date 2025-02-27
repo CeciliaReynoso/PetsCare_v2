@@ -5,9 +5,9 @@ const AuthGuard = ({ allowedRoles }) => {
   const { user } = useAuth();
   const userRol = window.sessionStorage.getItem('userRol');
 
-  if (!user || !userRol) {
-    return <Navigate to="/" />;
-  }
+  // if (!user || !userRol) {
+  //   return <Navigate to="/" />;
+  // }
 
   if (!allowedRoles.includes(userRol)) {
     return <Navigate to="/no-autorizado" />;
