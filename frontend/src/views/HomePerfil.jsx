@@ -1,17 +1,15 @@
 import { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import RolesContext from '../context/RolesContext';
 import useAuth from '../hooks/useAuth';
 
 const HomePerfil = () => {
   const { user } = useAuth();
   const { cargo, setCargo } = useContext(RolesContext);
-
+  const navigate = useNavigate();
   
   useEffect(() => {
-    if (!user) {
-      return;
-    }
-    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
+      if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
       navigate('/no-autorizado');
       return;
     }
@@ -35,6 +33,5 @@ const HomePerfil = () => {
       <p>Email: {user?.email}</p>
     </div>
   );
-};
-
+}
 export default HomePerfil;
