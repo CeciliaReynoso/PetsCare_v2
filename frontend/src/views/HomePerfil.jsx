@@ -3,11 +3,11 @@ import RolesContext from '../context/RolesContext';
 import useAuth from '../hooks/useAuth';
 
 const HomePerfil = () => {
-  // const { user } = useAuth();
-  // const { cargo, setCargo } = useContext(RolesContext);
+const { user } = useAuth();
+const { cargo, setCargo } = useContext(RolesContext);
 
   
-  // useEffect((user) => {
+  useEffect((user) => {
   //   if (!user) {
   //     return;
   //   }
@@ -15,15 +15,16 @@ const HomePerfil = () => {
     //   navigate('/');
     //   return;
     // }
-    // if (user) {
+    if (user) {
       const userNombre = window.sessionStorage.getItem('userNombre');
       const userRol = window.sessionStorage.getItem('userRol');
       const userEmail = window.sessionStorage.getItem('userEmail');
       const userDireccion = window.sessionStorage.getItem('userDireccion');
       
-  //     setCargo({ nombre: userNombre, rol: userRol, email: userEmail, direccion: userDireccion });
+  setCargo({ nombre: userNombre, rol: userRol, email: userEmail, direccion: userDireccion });
   //   }
-  // }, [user, setCargo]);
+    }
+  }, [user]);
 
   return (
     <div className='home-perfil-container'>
