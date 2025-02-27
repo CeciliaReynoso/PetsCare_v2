@@ -13,18 +13,18 @@ const HomePerfil = () => {
   const [userDireccion, setUserDireccion] = useState('');
 
   useEffect(() => {
-    if (!user) {
-      return;
-    }
-    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
-      navigate('/no-autorizado');
-      return;
-    }
+    // // if (!user) {
+    // //   return;
+    // // }
+    // if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
+    //   navigate('/no-autorizado');
+    //   return;
+    // }
     if (user) {
-      const userNombre = window.sessionStorage.getItem('userNombre');
-      const userRol = window.sessionStorage.getItem('userRol');
-      const userEmail = window.sessionStorage.getItem('userEmail');
-      const userDireccion = window.sessionStorage.getItem('userDireccion');
+      const userNombre = localStorage.getItem('userNombre');
+      const userRol = localStorage.getItem('userRol');
+      const userEmail = localStorage.getItem('userEmail');
+      const userDireccion = localStorage.getItem('userDireccion');
 
       setCargo({ nombre: userNombre, rol: userRol, email: userEmail, direccion: userDireccion });
 
