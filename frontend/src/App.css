@@ -224,8 +224,8 @@ a {
   
   .card {
     flex: 1 1 calc(33.333% - 1.25rem);  
-    width: 15rem; /* Equivalente a 300px si 1rem es 16px */
-    max-height: 30rem;
+    max-width: 18rem; /* Equivalente a 300px si 1rem es 16px */
+    height: 37rem;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -243,7 +243,6 @@ a {
   max-width: 75%;
   height: 30rem;
   justify-content: center;
-  align-items: center;
   object-fit: scale-down;
   border-bottom: 1px solid #ddd; /* Línea separadora entre la imagen y el texto */
 }
