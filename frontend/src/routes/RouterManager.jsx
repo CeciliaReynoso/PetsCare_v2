@@ -90,7 +90,6 @@ export const RouterManager = () => {
               <Route path="/seller/incomplete-orders" element={<IncompleteOrders />} />
             </Route>
           </Routes>
-          {/* <Footer /> */}
         </div>
       </Router>
     </RolesProvider>
