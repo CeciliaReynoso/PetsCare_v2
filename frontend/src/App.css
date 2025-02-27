@@ -240,8 +240,8 @@ a {
 }
 
 .card img {
-  width: 75%;
-  height: 70%;
+  max-width: 75%;
+  max-height: 30rem;
   justify-content: center;
   object-fit: scale-down;
   border-bottom: 1px solid #ddd; /* Línea separadora entre la imagen y el texto */
