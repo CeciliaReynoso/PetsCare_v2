@@ -22,7 +22,7 @@ const Admin = () => {
           return;
         }
     
-        if (user.rol !== 'ADMINISTRADOR') {
+        if (!user || user.rol !== 'ADMINISTRADOR') {
           navigate('/no-autorizado');
           return;
         }
