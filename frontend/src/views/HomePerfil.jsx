@@ -8,7 +8,14 @@ const HomePerfil = () => {
 
   
   useEffect(() => {
-      if (user) {
+    if (!user) {
+      return;
+    }
+    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
+      navigate('/no-autorizado');
+      return;
+    }
+    if (user) {
       const userNombre = localStorage.getItem('userNombre');
       const userRol = localStorage.getItem('userRol');
       const userEmail = localStorage.getItem('userEmail');
@@ -19,7 +26,6 @@ const HomePerfil = () => {
   }, [user, setCargo]);
 
   return (
-    <div className='app-container'>
     <div className='home-perfil-container'>
       <h3>Mi Perfil</h3>
       <p>Datos registrados</p>
@@ -27,7 +33,6 @@ const HomePerfil = () => {
       <p>Rol: {user?.rol}</p>
       <p>Dirección: {user?.direccion}</p>
       <p>Email: {user?.email}</p>
-    </div>
     </div>
   );
 };
