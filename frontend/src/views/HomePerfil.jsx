@@ -3,19 +3,19 @@ import RolesContext from '../context/RolesContext';
 import useAuth from '../hooks/useAuth';
 
 const HomePerfil = () => {
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
   const { cargo, setCargo } = useContext(RolesContext);
 
   
   useEffect(() => {
-    if (!user) {
+    if (!isLoading) {
       return;
     }
     if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
       navigate('/no-autorizado');
       return;
     }
-    if (user) {
+    if (isLoading) {
       const userNombre = window.sessionStorage.getItem('userNombre');
       const userRol = window.sessionStorage.getItem('userRol');
       const userEmail = window.sessionStorage.getItem('userEmail');
@@ -23,7 +23,7 @@ const HomePerfil = () => {
       
       setCargo({ nombre: userNombre, rol: userRol, email: userEmail, direccion: userDireccion });
     }
-  }, [user, setCargo]);
+  }, [user, setCargo, isLoading]);
 
   return (
     <div className='home-perfil-container'>
