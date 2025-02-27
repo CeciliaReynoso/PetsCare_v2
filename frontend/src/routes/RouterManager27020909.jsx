@@ -51,7 +51,7 @@ export const RouterManager = () => {
             <Route path="/tienda" element={<TiendaLayout />} />  
             <Route path="/detail/:id" element={<Detail />} />        
             
-            <Route path="/" element={!user || user?.rol === roles.CLIENTE ? <MainLayout /> :<MainLayout />}>
+            <Route path="/" element={!user || user?.rol === roles.CLIENTE ? <MainLayout /> : <AdminLayout />}>
               <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />}/>
               <Route path="/profile" element={<AuthGuard allowedRoles={[roles.ADMIN, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Profile /></AuthGuard>} />
@@ -62,7 +62,7 @@ export const RouterManager = () => {
 
             </Route>
 
-            <Route path="/admin" element={!user || user?.rol === roles.ADMINISTRADOR ? <MainLayout /> : <AdminLayout />}>
+            <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Admin />} />        
               <Route path="/admin/users" element={<UserManagement />} />
               <Route path="/admin/users/edit-user/:id" element={<EditUserForm />} />
@@ -75,7 +75,7 @@ export const RouterManager = () => {
               <Route path="/admin/subcategorias/nueva" element={<NuevaSubcategoria />} />
             </Route>
 
-            <Route path="/buyer" element={!user || user?.rol === roles.COMPRADOR ?<MainLayout /> : <BuyerLayout />}>
+            <Route path="/buyer" element={<BuyerLayout />}>
               <Route index element={<Buyer />} />
               <Route path="/buyer/orders" element={<SupplierOrders />} />
               <Route path="/buyer/low-stock-products" element={<LowStockProducts />} />
@@ -85,7 +85,7 @@ export const RouterManager = () => {
               <Route path="/buyer/subcategorias/nueva" element={<NuevaSubcategoria />} />
             </Route>
 
-            <Route path="/seller" element={!user || user?.rol === roles.COMPRADOR ?<MainLayout /> : <SellerLayout />}>
+            <Route path="/seller" element={<SellerLayout />}>
               <Route index element={<Seller />} />
               <Route path="/seller/orders" element={<CustomerOrders />} />
               <Route path="/seller/incomplete-orders" element={<IncompleteOrders />} />
