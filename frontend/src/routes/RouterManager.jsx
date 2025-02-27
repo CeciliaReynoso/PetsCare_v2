@@ -51,7 +51,7 @@ export const RouterManager = () => {
             <Route path="/tienda" element={<TiendaLayout />} />  
             <Route path="/detail/:id" element={<Detail />} />        
             
-            <Route path="/" element={!user || user?.rol === roles.CLIENTE ? <MainLayout /> :<MainLayout />}>
+            <Route path="/" element={!user || user?.rol === roles.CLIENTE ? <MainLayout /> :<AdminLayout />}>
               <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />}/>
               <Route path="/profile" element={<AuthGuard allowedRoles={[roles.ADMIN, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Profile /></AuthGuard>} />
@@ -61,7 +61,7 @@ export const RouterManager = () => {
               <Route path="/productos-promocion" element={<ProductGallery />} />
             </Route>
 
-            <Route path="/admin" element={user?.rol === roles.ADMINISTRADOR ?  <AdminLayout /> : <MainLayout />}>
+            <Route path="/admin" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR]}><AdminLayout /></AuthGuard>}>           
               <Route index element={<Admin />} />        
               <Route path="/admin/users" element={<UserManagement />} />
               <Route path="/admin/users/edit-user/:id" element={<EditUserForm />} />
@@ -74,7 +74,7 @@ export const RouterManager = () => {
               <Route path="/admin/subcategorias/nueva" element={<NuevaSubcategoria />} />
             </Route>
 
-            <Route path="/buyer" element={user?.rol === roles.COMPRADOR ? <BuyerLayout /> : <MainLayout />}>
+            <Route path="/buyer" element={<AuthGuard allowedRoles={[roles.COMPRADOR]}><BuyerLayout /></AuthGuard>}>           
               <Route index element={<Buyer />} />
               <Route path="/buyer/orders" element={<SupplierOrders />} />
               <Route path="/buyer/low-stock-products" element={<LowStockProducts />} />
@@ -84,7 +84,7 @@ export const RouterManager = () => {
               <Route path="/buyer/subcategorias/nueva" element={<NuevaSubcategoria />} />
             </Route>
 
-            <Route path="/seller" element={user?.rol === roles.VENDEDOR ? <SellerLayout /> : <MainLayout />}>
+            <Route path="/seller" element={<AuthGuard allowedRoles={[roles.VENDEDOR]}><SellerLayout /></AuthGuard>}>           
               <Route index element={<Seller />} />
               <Route path="/seller/orders" element={<CustomerOrders />} />
               <Route path="/seller/incomplete-orders" element={<IncompleteOrders />} />
