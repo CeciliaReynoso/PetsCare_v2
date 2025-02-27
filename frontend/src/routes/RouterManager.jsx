@@ -59,7 +59,6 @@ export const RouterManager = () => {
               <Route path="/detail/:id" element={<Detail />} />
               <Route path="/home-perfil" element={<HomePerfil />} />
               <Route path="/productos-promocion" element={<ProductGallery />} />
-
             </Route>
 
             <Route path="/admin" element={!user || user?.rol === roles.ADMINISTRADOR ? <MainLayout /> : <AdminLayout />}>
