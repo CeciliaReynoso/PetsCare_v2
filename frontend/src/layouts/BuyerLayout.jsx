@@ -9,9 +9,9 @@ const BuyerLayout = () => {
       <main className='app-container'>  
          <div style={{padding: '3rem'}}>  
          <div className='className="table table-striped"'> 
-         </div>                                        
-          <Outlet />    
-          </div>   
+         </div>                                          
+         </div>   
+        <Outlet />
       </main>
     </div>
   );
