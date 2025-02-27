@@ -72,6 +72,9 @@ const useAuth = () => {
     window.sessionStorage.removeItem('userDireccion');
     window.sessionStorage.removeItem('userId');
     window.sessionStorage.removeItem('checkoutCart'); // Eliminar el carrito de compras
+    localStorage.removeItem('Direccion'); 
+    localStorage.removeItem('userNombre');
+    localStorage.removeItem('userRol');
     setUser(null);
     setToken(null);
     setAuthToken(null); // Eliminar el token de Axios      

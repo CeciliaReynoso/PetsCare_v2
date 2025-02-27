@@ -9,8 +9,8 @@ const Buyer = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    const userNombre = localStorage.getItem('userNombre');
-    const userRol = localStorage.getItem('userRol');
+    const userNombre = window.sessionStorage.getItem('userNombre');
+    const userRol = window.sessionStorage.getItem('userRol');
 
     if (userNombre && userRol) {
       setCargo({ nombre: userNombre, rol: userRol });
