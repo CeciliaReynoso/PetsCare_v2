@@ -240,9 +240,9 @@ a {
 }
 
 .card img {
-  max-width: 50%;
-  max-height: 50%;
-  object-fit: cover;
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: scale-down;
   border-bottom: 1px solid #ddd; /* Línea separadora entre la imagen y el texto */
 }
 
