@@ -51,8 +51,9 @@ export const RouterManager = () => {
             <Route path="/tienda" element={<TiendaLayout />} />  
             <Route path="/detail/:id" element={<Detail />} />        
 
-            <Route path="/" element={<AuthGuard allowedRoles={!user ||[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}> <MainLayout /></AuthGuard>}>
-              <Route index element={<Home />} />
+        
+            <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />}/>
               <Route path="/profile" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Profile /></AuthGuard>} />
               <Route path="/gallery" element={<Gallery />} />
