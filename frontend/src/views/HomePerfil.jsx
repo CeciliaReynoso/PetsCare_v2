@@ -16,10 +16,10 @@ const HomePerfil = () => {
       return;
     }
     if (user) {
-      const userNombre = localStorage.getItem('userNombre');
-      const userRol = localStorage.getItem('userRol');
-      const userEmail = localStorage.getItem('userEmail');
-      const userDireccion = localStorage.getItem('userDireccion');
+      const userNombre = window.sessionStorage.getItem('userNombre');
+      const userRol = window.sessionStorage.getItem('userRol');
+      const userEmail = window.sessionStorage.getItem('userEmail');
+      const userDireccion = window.sessionStorage.getItem('userDireccion');
       
       setCargo({ nombre: userNombre, rol: userRol, email: userEmail, direccion: userDireccion });
     }
