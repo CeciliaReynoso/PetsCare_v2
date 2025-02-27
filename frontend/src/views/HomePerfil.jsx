@@ -8,10 +8,7 @@ const HomePerfil = () => {
 
   
   useEffect(() => {
-    if (!user) {
-      return;
-    }
-    if (user.rol !== 'COMPRADOR' && user.rol !== 'ADMINISTRADOR' && user.rol !== 'CLIENTE') {
+      if (!user || user.rol !== 'COMPRADOR' || user.rol !== 'ADMINISTRADOR' || user.rol !== 'CLIENTE') {
       navigate('/no-autorizado');
       return;
     }
