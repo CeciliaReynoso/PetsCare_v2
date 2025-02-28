@@ -38,7 +38,12 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
-      window.alert(`${error.response?.data?.message || error.message} 🙁.`);
+      // Mostrar un mensaje si el usuario no está registrado
+      if (error.response?.status === 401 || error.response?.status === 500) {
+        console.log('Usuario no registrado. Por favor, regístrese.');
+      } else {
+        console.log(`${error.response?.data?.message || error.message} 🙁.`);
+      }
     }
   };
 
