@@ -353,6 +353,13 @@ a {
   color: var(--color-accent);
 }
 @media (max-width: 576px) {
+  
+  body {
+     display: flex;
+      flex-direction: column;
+      height: 100vh;
+  }
+  
   .nav-btn {
     border: none;
   }  

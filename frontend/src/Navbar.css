@@ -4,8 +4,12 @@
   }  
   .hide-on-mobile {
     display: none;
-  }}
-
+  }
+  .cart-icon {
+    background-color: transparent;
+   }
+}
+ 
 
 :root {
     --color-primary: #fff;
