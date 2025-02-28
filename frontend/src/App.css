@@ -219,7 +219,7 @@ a {
     justify-content: center;
     gap: 1.25rem; 
     padding: 1.25rem; 
-    height: 45vh;
+    height: auto;
   
   }
   
