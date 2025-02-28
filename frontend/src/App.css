@@ -263,6 +263,7 @@ a {
   font-size: 14px;
   color: #333;
   margin-bottom: 10px;
+
 }
 
 .card-link {
@@ -413,5 +414,6 @@ a {
   justify-content: center;
   gap: 1.25rem; 
   padding: 1.25rem; 
+  height: 100vh;
 }
 
