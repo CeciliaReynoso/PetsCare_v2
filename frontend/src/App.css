@@ -359,6 +359,9 @@ a {
       height: 100vh;
   }
   
+  .gallery-container {
+    height: 100vh;
+  }  
   .nav-btn {
     border: none;
   }  
@@ -366,6 +369,9 @@ a {
     display: none;
   }}
 
+  .cart-icon {
+    background-color: transparent;
+  }
 @media (max-width: 768px) {
   .navbar {
     margin:10px;
@@ -411,15 +417,7 @@ a {
     width: 100%;
     text-align: center;
   }
+
 }
 
-.gallery-container {
-  padding-top: 20rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.25rem; 
-  padding: 1.25rem; 
-  height: 100vh;
-}
 
