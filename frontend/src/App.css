@@ -84,10 +84,10 @@ body {
 .home-container {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  padding-top: 12rem;
 }
 .home-perfil-container {
-  padding-top: 9rem;
+  padding-top: 12rem;
 }
 .perfil-container {
   padding-top: 1rem;
