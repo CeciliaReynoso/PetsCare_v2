@@ -386,7 +386,7 @@ a {
     justify-content: center;
     overflow-y: auto;
     overflow-x: auto;
-    height: auto;
+    height: 50vh;
     position: relative;
   }      
 
