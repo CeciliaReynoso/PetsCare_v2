@@ -61,7 +61,7 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  height: 45vh;
+  max-height: 45vh;
 }
 
 .app-container {
@@ -386,7 +386,7 @@ a {
     justify-content: center;
     overflow-y: auto;
     overflow-x: auto;
-    height: 50vh;
+    max-height: 45%vh;
     position: relative;
   }      
 
