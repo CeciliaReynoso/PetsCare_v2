@@ -44,7 +44,7 @@ export const RouterManager = () => {
         <div className="app-container">
           <Routes>
             <Route path="*" element={<Page404 />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<AuthGuard allowedRoles={[roles.ADMINISTRADOR, roles.COMPRADOR, roles.VENDEDOR, roles.CLIENTE]}><Login /></AuthGuard>} />
             <Route path="/register" element={<Register />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/tienda" element={<TiendaLayout />} />
