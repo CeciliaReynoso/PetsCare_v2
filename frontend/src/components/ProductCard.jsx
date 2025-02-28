@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
       <img src={product.imagen_url} alt={product.nombre} className="card-img-top" />
       <div className="card-body">
         <h3 className="card-title">{product.nombre}</h3>
-        {/* <p className="card-text">{product.descripcion}</p> */}
+        <p className="card-text">{product.descripcion}</p>
         <p className="card-text">Precio: ${product.precio_venta}</p>
         <p className="card-text">
           {product.stock_actual >= product.stock_minimo ? 'Disponible' : 'Pronto de vuelta'}
