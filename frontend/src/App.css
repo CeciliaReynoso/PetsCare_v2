@@ -84,7 +84,7 @@ body {
 .home-container {
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
+  margin-top: auto;
 }
 .home-perfil-container {
   padding-top: 9rem;
