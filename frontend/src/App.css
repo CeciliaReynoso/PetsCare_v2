@@ -220,9 +220,11 @@ a {
     gap: 1.25rem; 
     padding: 1.25rem; 
     height: 45vh;
+  
   }
   
   .card {
+    object-fit: fill;
     flex: 1 1 calc(33.333% - 1.25rem);  
     max-width: 21rem; /* Equivalente a 300px si 1rem es 16px */
     height: 35rem;
