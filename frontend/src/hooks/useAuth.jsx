@@ -69,7 +69,7 @@ const useAuth = () => {
 
       return userResponse.data;
     } catch (error) {
-      console.error('Error al iniciar sesión:', error.response?.data || error.message);
+      // console.error('Error al iniciar sesión:', error.response?.data || error.message);
       // Mostrar un mensaje si el usuario no está registrado
       if (error.response?.status === 401 || error.response?.status === 500) {
         alert('Usuario no registrado. Por favor, regístrese.');
