@@ -61,7 +61,7 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  max-height: 45vh;
+  max-height: 100vh;
 }
 
 .app-container {
@@ -87,7 +87,6 @@ body {
   padding-top: 10rem;
 }
 .home-perfil-container {
-  z-index: 1;
   padding-top: 9rem;
 }
 .perfil-container {
@@ -219,7 +218,7 @@ a {
     justify-content: center;
     gap: 1.25rem; 
     padding: 1.25rem; 
-    height: 45%;
+    height: 45vh;
   
   }
   
@@ -386,7 +385,7 @@ a {
     justify-content: center;
     overflow-y: auto;
     overflow-x: auto;
-    max-height: 45%vh;
+    height: 100vh;
     position: relative;
   }      
 
